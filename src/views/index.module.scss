@@ -1,0 +1,22 @@
+.box {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  .item{
+    width: 100vw;
+    height: 100vh;
+    margin: 20px 0;
+
+    video{
+      width: 90vw;
+      height: 90vh;
+    }
+    .mask{
+      width: 100vw;
+      height: 100vh;
+      background-color: #c0d21e;
+      transform: translateY(-100%);
+      opacity: 0.2;
+    }
+  }
+}
