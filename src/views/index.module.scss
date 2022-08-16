@@ -2,21 +2,40 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  .item{
-    width: 100vw;
-    height: 100vh;
-    margin: 20px 0;
+  position: relative;
 
-    video{
-      width: 90vw;
-      height: 90vh;
+  .item {
+
+
+    @for $i from 1 to 9 {
+      &:nth-child(#{$i}) {
+        transform: translateY(($i - 1)*100%);
+      }
     }
-    .mask{
+
+    position: absolute;
+
+    video {
       width: 100vw;
       height: 100vh;
-      background-color: #c0d21e;
-      transform: translateY(-100%);
-      opacity: 0.2;
     }
+  }
+}
+
+.mask {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    color: white;
+    opacity:1;
+    width: 50px;
+    height: auto;
   }
 }
